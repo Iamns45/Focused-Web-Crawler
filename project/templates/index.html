@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Search query for seed document {% endblock %}</h1>
+    <form method="post">
+        <label for="title">SeedQuery keyword</label>
+        <br>
+        <input type="text" name="title"
+               placeholder="Message title"
+               value="{{ request.form['title'] }}"></input>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <hr/>
+ 
+    {{mesg}}
+{% endblock %}
